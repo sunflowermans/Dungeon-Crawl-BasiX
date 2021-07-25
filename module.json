@@ -1,0 +1,12 @@
+{
+    "name": "Dungeon-Crawl-BasiX",
+    "title": "Dungeon Crawl BasiX",
+    "description": "For easy dungeon crawling procedures by the referee.",
+    "author": "Directsun",
+    "version": "0.1.0",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.8",
+    "scripts": [
+        "scripts/hello.js"
+      ]
+}
