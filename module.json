@@ -8,5 +8,13 @@
     "compatibleCoreVersion": "0.8.8",
     "scripts": [
         "scripts/hello.js"
-      ]
+    ],
+    "dependencies": [
+        {
+            "name": "fvtt-party-resources"
+        },
+        {
+            "name": "settings-extender"
+        }
+    ]
 }
