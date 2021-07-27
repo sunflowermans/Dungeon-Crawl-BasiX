@@ -1,7 +1,7 @@
-import { MODULE_NAME } from './constants.js';
+import { MODULE_NAME } from './constants/constants.js';
 import ModuleSettings from "./settings.js";
 
-console.log("Hello World! This code runs immediately when the file is loaded.");
+console.log("Nice dude mang!! This code runs immediately when the file is loaded.");
 
 Hooks.once('init', function() {
     console.log("Doing a thing, yeah! " + MODULE_NAME);
@@ -10,7 +10,6 @@ Hooks.once('init', function() {
     }
   
     ModuleSettings.register();
-    
   })
 
 Hooks.on("ready", function() {

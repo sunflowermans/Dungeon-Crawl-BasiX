@@ -1,4 +1,4 @@
-import { MODULE_NAME } from './constants.js';
+import { MODULE_NAME, SETTINGS } from './constants/constants.js';
 
 export default class ModuleSettings {
     static add(key, data = {}) {
@@ -14,21 +14,9 @@ export default class ModuleSettings {
       return game.settings.get(MODULE_NAME, key)
     }
   
-    static register() {  
-      game.settings.register(
-        'dungeon-crawl-basixs',
-        'first-time-startup-notification-shown',
-        { scope: "client", config: false, type: Boolean, default: false }
-      )
-  
-      this.add('toggle_actors_button_for_players', {
-        name: 'testSetting',
-        hint: 'Its a hint!',
-        default: true,
-        type: Boolean,
-        onChange: value => ActorDirectory.collection.render('actors')
-      });
-
+    static register() {
+        for (const [key, setting] of Object.entries(SETTINGS)) {
+            this.add(setting.name, setting);
+        };        
     }
-  }
-  
+}

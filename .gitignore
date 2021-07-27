@@ -1,3 +1,4 @@
 # windows environment
 copyfiles.bat
 exclude.txt
+watchfiles.ps1
