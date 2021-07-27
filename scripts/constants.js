@@ -1,0 +1,1 @@
+export const MODULE_NAME = 'Dungeon-Crawl-BasiX';
