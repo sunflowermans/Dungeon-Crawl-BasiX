@@ -23,23 +23,22 @@ let removeResources = function(expiringList, list) {
 }
 
 let addResource = function(name, options, list) {
-list.push(name)
-window.pr.api.set('resource_list', list)
+  list.push(name)
+  window.pr.api.set('resource_list', list)
 
-window.pr.api.register(name);
-window.pr.api.register(name.concat('_name'));
-window.pr.api.register(name.concat('_visible'), { default: true });
-window.pr.api.register(name.concat('_max'));
-window.pr.api.register(name.concat('_min'));
-window.pr.api.register(name.concat('_player_managed'), { default: false });
+  window.pr.api.register(name);
+  window.pr.api.register(name.concat('_name'));
+  window.pr.api.register(name.concat('_visible'), { default: true });
+  window.pr.api.register(name.concat('_max'));
+  window.pr.api.register(name.concat('_min'));
+  window.pr.api.register(name.concat('_player_managed'), { default: false });
 
-window.pr.api.set(name, options.value);
-window.pr.api.set(name.concat('_name'), name);
-window.pr.api.set(name.concat('_visible'), options.visible);
-window.pr.api.set(name.concat('_max'), options.max);
-window.pr.api.set(name.concat('_min'), options.min);
-window.pr.api.set(name.concat('_player_managed'), options.player_managed);
-
+  window.pr.api.set(name, options.value);
+  window.pr.api.set(name.concat('_name'), name);
+  window.pr.api.set(name.concat('_visible'), options.visible);
+  window.pr.api.set(name.concat('_max'), options.max);
+  window.pr.api.set(name.concat('_min'), options.min);
+  window.pr.api.set(name.concat('_player_managed'), options.player_managed);
 }
 
 resource_list.forEach((rName)=>{
