@@ -1,4 +1,5 @@
-import { MODULE_NAME, SETTINGS } from './constants/constants.js';
+import { MODULE_NAME } from './constants/names.js';
+import { SETTINGS } from './constants/settings.js';
 
 export default class ModuleSettings {
     static add(key, data = {}) {
@@ -16,7 +17,7 @@ export default class ModuleSettings {
   
     static register() {
         for (const [key, setting] of Object.entries(SETTINGS)) {
-            this.add(setting.name, setting);
+            this.add(setting.settingName, setting);
         };        
     }
 }
