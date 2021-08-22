@@ -19,14 +19,6 @@ export const torch = () => {
 
   window.pr.api.register_resource(torchName);
 
-  // window.pr.api.register_setting(torchName);
-  // window.pr.api.register_setting(torchName.concat('_name'));
-  // window.pr.api.register_setting(torchName.concat('_visible'), { default: true });
-  // window.pr.api.register_setting(torchName.concat('_max'));
-  // window.pr.api.register_setting(torchName.concat('_min'));
-  // window.pr.api.register_setting(torchName.concat('_player_managed'), { default: false });
-  // window.pr.api.register_setting(torchName.concat('_notify_chat'), { default: false })
-
   window.pr.api.set(torchName, torchTurns);
   window.pr.api.set(torchName.concat('_name'), torchName);
   window.pr.api.set(torchName.concat('_visible'), true);

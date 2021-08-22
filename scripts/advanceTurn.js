@@ -1,4 +1,5 @@
 export async function advanceTurn() {
+  //TODO: bug cant find resources until PR window is open...
   let unitsPassing = 1;
   let timeGone = false;
   let maxTime = 6;
